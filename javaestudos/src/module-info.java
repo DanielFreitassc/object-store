@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author andro
+ *
+ */
+module javaestudos {
+}
