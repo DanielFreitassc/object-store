@@ -22,9 +22,11 @@ public class Appfinances {
 		System.out.println(" Seu dinheiro nesse mês é: "+ total);
 		System.out.println(" Suas despesas são: "+ dispesa);
 		if (total-dispesa >=0) {
+		System.out.println("------------------------------------------");
 		System.out.println(" Sobrara no final do mês: "+ (total-dispesa));
 		}
 		else {
+		System.out.println("------------------------------------------");
 		System.out.println("Você está devendo: "+ (total-dispesa));
 		}
 		dados.close();
