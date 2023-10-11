@@ -36,3 +36,17 @@ http://localhost:8080/users/
     "password": "xxx"
 }
 ```
+```
+http://localhost:8080/tasks/
+```
+```
+{
+    "description":"Tarefa para gravar aula de tasks do curso de spring boot",
+    "title": "Gravação de aula",
+    "priority":"ALTA",
+    "startAt": "2023-10-06T12:30:00",
+    "endAt": "2023-10-06T15:35;00",
+    "idUser": "12999827-0edf-466e-8d6a-4c3caf37b9fe"
+
+}
+```
