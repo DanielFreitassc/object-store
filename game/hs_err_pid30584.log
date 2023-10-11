@@ -1,0 +1,211 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=30584, tid=27748
+#
+# JRE version:  (17.0.8.1+1) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.8.1+1, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 --module-path=D:\Repositorio local\projectsjava\game\bin -XX:+ShowCodeDetailsInExceptionMessages -Djdk.module.main=game game/game.Jogo
+
+Host: AMD Ryzen 5 3600 6-Core Processor              , 12 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.2215)
+Time: Sat Oct  7 22:29:20 2023 Hora oficial do Brasil elapsed time: 0.009631 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002b2513539c0):  JavaThread "Unknown thread" [_thread_in_vm, id=27748, stack(0x000000f4fc200000,0x000000f4fc300000)]
+
+Stack: [0x000000f4fc200000,0x000000f4fc300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x678b0a]
+V  [jvm.dll+0x835e84]
+V  [jvm.dll+0x83762e]
+V  [jvm.dll+0x837c93]
+V  [jvm.dll+0x24746f]
+V  [jvm.dll+0xa697b]
+V  [jvm.dll+0x2d96d4]
+V  [jvm.dll+0x807efc]
+V  [jvm.dll+0x36bb21]
+V  [jvm.dll+0x7e733c]
+V  [jvm.dll+0x3ee4af]
+V  [jvm.dll+0x3f00c1]
+C  [jli.dll+0x528b]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa68]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffc7f8ea018, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000002b2513539c0 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=27748, stack(0x000000f4fc200000,0x000000f4fc300000)]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.006 Loaded shared library C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6056c0000 - 0x00007ff6056ce000 	C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\javaw.exe
+0x00007ffcebc30000 - 0x00007ffcebe44000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffceb270000 - 0x00007ffceb334000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffce92e0000 - 0x00007ffce9684000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffce9140000 - 0x00007ffce9251000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffcd0130000 - 0x00007ffcd0147000 	C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\jli.dll
+0x00007ffcd0150000 - 0x00007ffcd0169000 	C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\VCRUNTIME140.dll
+0x00007ffceba10000 - 0x00007ffcebbbe000 	C:\Windows\System32\USER32.dll
+0x00007ffce8fb0000 - 0x00007ffce8fd6000 	C:\Windows\System32\win32u.dll
+0x00007ffcdc400000 - 0x00007ffcdc693000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2215_none_270d72677387dfc3\COMCTL32.dll
+0x00007ffceabf0000 - 0x00007ffceac19000 	C:\Windows\System32\GDI32.dll
+0x00007ffcea9a0000 - 0x00007ffceaa47000 	C:\Windows\System32\msvcrt.dll
+0x00007ffce9690000 - 0x00007ffce97a8000 	C:\Windows\System32\gdi32full.dll
+0x00007ffce90a0000 - 0x00007ffce913a000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffceb420000 - 0x00007ffceb451000 	C:\Windows\System32\IMM32.DLL
+0x00007ffcdbd70000 - 0x00007ffcdbd7c000 	C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\vcruntime140_1.dll
+0x00007ffc918c0000 - 0x00007ffc91951000 	C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\msvcp140.dll
+0x00007ffc7edd0000 - 0x00007ffc7fa1c000 	C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\server\jvm.dll
+0x00007ffceb1c0000 - 0x00007ffceb270000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffceb060000 - 0x00007ffceb106000 	C:\Windows\System32\sechost.dll
+0x00007ffceade0000 - 0x00007ffceaef7000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffcdafe0000 - 0x00007ffcdafe9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffcde4a0000 - 0x00007ffcde4d4000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffce7e60000 - 0x00007ffce7ead000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007ffce3460000 - 0x00007ffce346a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffceb340000 - 0x00007ffceb3b1000 	C:\Windows\System32\WS2_32.dll
+0x00007ffce7e40000 - 0x00007ffce7e53000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007ffce80a0000 - 0x00007ffce80b8000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ffce62c0000 - 0x00007ffce62ca000 	C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\jimage.dll
+0x00007ffcdd970000 - 0x00007ffcddb9e000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ffceb580000 - 0x00007ffceb90a000 	C:\Windows\System32\combase.dll
+0x00007ffcea1d0000 - 0x00007ffcea2a7000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ffcd9640000 - 0x00007ffcd9672000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ffce9260000 - 0x00007ffce92da000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffce5aa0000 - 0x00007ffce5ac5000 	C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2215_none_270d72677387dfc3;C:\Users\andro\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047\jre\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 --module-path=D:\Repositorio local\projectsjava\game\bin -XX:+ShowCodeDetailsInExceptionMessages -Djdk.module.main=game 
+java_command: game/game.Jogo
+java_class_path (initial): <not set>
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4282384384                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 4282384384                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Users/andro/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047/jre/bin/server;C:/Users/andro/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230831-1047/jre/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Node JS\;C:\Users\andro\AppData\Local\Microsoft\WindowsApps;;C:\Users\andro\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\andro\AppData\Roaming\npm;D:\eclipse\eclipse;
+USERNAME=andro
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
+TMP=C:\Users\andro\AppData\Local\Temp
+TEMP=C:\Users\andro\AppData\Local\Temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.2215)
+OS uptime: 0 days 10:57 hours
+
+CPU: total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 23 model 113 stepping 0 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt
+Processor Information for all 12 processors :
+  Max Mhz: 3600, Current Mhz: 3600, Mhz Limit: 3600
+
+Memory: 4k page, system-wide physical 16328M (6003M free)
+TotalPageFile size 65480M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 14M, peak: 15M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.8.1+1) for windows-amd64 JRE (17.0.8.1+1), built on Aug 23 2023 15:29:17 by "admin" with MS VC++ 16.7 (VS2019)
+
+END.
