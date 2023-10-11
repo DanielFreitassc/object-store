@@ -22,3 +22,17 @@ public class MinhaPrimeiraController{
 
 }
 ```
+# [Apidog](https://apidog.com/download/)
+
+### New Request
+### Post
+```
+http://localhost:8080/users/
+```
+```
+{
+    "name": "xxx",
+    "username": "xxx",
+    "password": "xxx"
+}
+```
