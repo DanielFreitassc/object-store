@@ -1,12 +1,18 @@
-package models;
-
 public class PessoaController {
     public static void main(String[] args) {
-        Pessoa pessoa = new Pessoa();
-        pessoa.setName("Daniel");
-        pessoa.setCpf("1001010100");
-        pessoa.setIdade(20);
-        
-        System.out.println(pessoa.imprimirPessoa(1));
-    }
+        Professor professor = new Professor();
+        professor.setName("Daniel");
+        professor.setCpf("1001010100");
+        professor.setIdade(20);
+        professor.setSalario(2000);
+
+        Aluno aluno = new Aluno();
+        aluno.setName("Luiz");
+        aluno.setCpf("244");
+        aluno.setIdade(20);
+        aluno.setMatricula("202020");
+
+        System.out.println(professor.imprimirPessoa());
+        System.out.println(aluno.imprimirPessoa());
+    }   
 }

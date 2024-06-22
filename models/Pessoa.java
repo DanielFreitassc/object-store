@@ -1,5 +1,3 @@
-package models;
-
 public class Pessoa {
     private String name;
     private int idade;
@@ -24,7 +22,8 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    String imprimirPessoa(int indice) {
-        return "Nome: "+name+" Idade: "+idade+" CPF: "+cpf+indice;
+    String imprimirPessoa() {
+        return "Nome: "+name+" Idade: "+idade+" CPF: "+cpf;
     }
 }
+
