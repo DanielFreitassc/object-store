@@ -1,4 +1,4 @@
-
+package PrimeiroModulo.models;
 // Usando herança 
 public class Professor extends Pessoa{    
     private double salario;

@@ -1,4 +1,4 @@
-package excecoes;
+package PrimeiroModulo.excecoes;
 
 public class Excecoes {
     // Checked exceptions

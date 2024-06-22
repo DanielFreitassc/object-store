@@ -1,4 +1,4 @@
-package conta;
+package PrimeiroModulo.conta;
 
 public class ContaBancaria {
 

@@ -1,4 +1,4 @@
-package construtor;
+package PrimeiroModulo.construtor;
 
 public class Construtor {   
     private int numero;

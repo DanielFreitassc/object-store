@@ -1,4 +1,4 @@
-package construtor;
+package PrimeiroModulo.construtor;
 
 public class ConstrutorController {
     public static void main(String[] args) {

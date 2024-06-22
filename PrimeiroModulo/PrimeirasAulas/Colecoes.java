@@ -1,4 +1,4 @@
-package PrimeirasAulas;
+package PrimeiroModulo.PrimeirasAulas;
 import java.util.HashMap;
 import java.util.Map;
 

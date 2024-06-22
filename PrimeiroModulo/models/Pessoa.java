@@ -1,3 +1,4 @@
+package PrimeiroModulo.models;
 public class Pessoa {
     private String name;
     private int idade;
