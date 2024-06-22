@@ -1,4 +1,4 @@
-package veiculo;
+package PrimeiroModulo.veiculo;
 
 public class Moto implements Veiculo{
 

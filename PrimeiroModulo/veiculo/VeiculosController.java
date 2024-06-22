@@ -1,4 +1,4 @@
-package veiculo;
+package PrimeiroModulo.veiculo;
 
 public class VeiculosController {
     public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class VeiculosController {
 
         carro.acelerar();
         carro.frear();
-        
+
         moto.acelerar();
         moto.frear();
     }   
