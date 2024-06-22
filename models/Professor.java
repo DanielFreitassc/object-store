@@ -1,3 +1,5 @@
+
+// Usando herança 
 public class Professor extends Pessoa{    
     private double salario;
 
@@ -9,5 +11,10 @@ public class Professor extends Pessoa{
         this.salario = salario;
     }
 
+    // Sobrescreve usando conceitos de polimorfismo
+    String imprimirPessoa() {
+        System.out.println(super.imprimirPessoa());
+        return "Você é professor";
+    }
     
 }

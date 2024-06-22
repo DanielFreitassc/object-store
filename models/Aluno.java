@@ -10,4 +10,9 @@ public class Aluno extends Pessoa {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
+    String imprimirPessoa() {
+        System.out.println(super.imprimirPessoa());
+        return "Você é aluno";
+    }
 }
