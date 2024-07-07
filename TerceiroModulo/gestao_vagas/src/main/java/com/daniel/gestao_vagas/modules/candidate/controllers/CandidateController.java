@@ -1,5 +1,6 @@
 package com.daniel.gestao_vagas.modules.candidate.controllers;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +22,13 @@ public class CandidateController {
     private final CandidateService candidateService;
 
     @PostMapping
-    public void create(@RequestBody @Valid CandidateEntity candidateEntity) {
+    public ResponseEntity<Object> create(@RequestBody @Valid CandidateEntity candidateEntity) {
+       try {
+         var result = candidateService.create(candidateEntity);
+         return  ResponseEntity.ok().body(result);
+       } catch (Exception e) {
+         return  ResponseEntity.badRequest().body(e.getMessage());
+       }
     }
 
     @GetMapping

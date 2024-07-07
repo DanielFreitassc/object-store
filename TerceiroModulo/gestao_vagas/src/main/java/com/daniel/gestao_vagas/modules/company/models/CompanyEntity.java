@@ -1,4 +1,4 @@
-package com.daniel.gestao_vagas.modules.candidate.models;
+package com.daniel.gestao_vagas.modules.company.models;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -6,7 +6,6 @@ import java.util.UUID;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Length;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,7 +14,6 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -23,27 +21,24 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "candidate")
-public class CandidateEntity {
-
+@NoArgsConstructor
+@Table(name = "company")
+public class CompanyEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy=GenerationType.UUID)
     private UUID id;
-    private String name;
-
-    @Pattern(regexp = "^\\S+", message = "Username não pode conter apenas espaços em branco")
+     @Pattern(regexp = "^\\S+", message = "Username não pode conter apenas espaços em branco")
     private String username;
 
     @Email( message = "Email precisa ser válido")
     private String email;
     @Length(min = 6, message = "Senha deve ter no minímo 6 carcteres")
     private String password;
+    private String website;
+    private String name;
     private String description;
-    private String curriculum;
 
     @CreationTimestamp
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 }
