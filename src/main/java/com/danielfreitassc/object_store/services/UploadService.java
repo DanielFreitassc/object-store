@@ -1,9 +1,9 @@
 package com.danielfreitassc.object_store.services;
 
+import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.UUID;
 
-import org.apache.commons.compress.utils.IOUtils;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -42,9 +42,20 @@ public class UploadService {
     }
 
     public byte[] getImage(String objectId) throws Exception {
-        var stream = minioClient.getObject(
-            GetObjectArgs.builder().bucket("images").object(objectId).build()
-        );
-        return IOUtils.toByteArray(stream);
+        try (InputStream stream = minioClient.getObject(
+            GetObjectArgs.builder().bucket("images").object(objectId).build())) {
+
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        byte[] buffer = new byte[1024];
+        int length;
+        while ((length = stream.read(buffer)) != -1) {
+            byteArrayOutputStream.write(buffer, 0, length);
+        }
+
+        return byteArrayOutputStream.toByteArray();
+
+        } catch (Exception e) {
+            throw new Exception("Erro ao obter o objeto: " + e.getMessage());
+        }
     }
 }
