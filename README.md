@@ -1,1 +1,2 @@
-# Object Store usando spring + 
+# Object Store usando spring + min.io
+
