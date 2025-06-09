@@ -75,4 +75,3 @@ com.danielfreitassc.object_store
 
 ## Autor
 Desenvolvido por Daniel Freitas (com.danielfreitassc).
-
